@@ -31,12 +31,11 @@ def build_heap(data):
                     data[notleaf*2+1] = temp
                 notleaf-=1
                 cycle+=1
-                if cycle ==50000:
-                    flag = True
+                
                 continue    
 
             if notleaf == 0: flag = True
-            elif data[notleaf] < data[notleaf*2+1] and datalen > notleaf*2+2 and data[notleaf] < data[notleaf*2+2] :notleaf-=1
+            elif data[notleaf] < data[notleaf*2+1] and datalen > notleaf*2+2 and data[notleaf] < data[notleaf*2+2] :flag = True
 
         else: notleaf = int(len(data)/2-1)        
                 
