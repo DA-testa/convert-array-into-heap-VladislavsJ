@@ -36,6 +36,8 @@ def build_heap(data):
                 continue    
 
             if notleaf == 0: flag = True
+            elif data[notleaf] < data[notleaf*2+1] and datalen > notleaf*2+2 and data[notleaf] < data[notleaf*2+2] :notleaf-=1
+
         else: notleaf = int(len(data)/2-1)        
                 
             
